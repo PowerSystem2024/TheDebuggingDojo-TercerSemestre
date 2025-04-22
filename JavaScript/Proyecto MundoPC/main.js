@@ -36,3 +36,11 @@ mostrarInfoDispositivo(raton);
 mostrarInfoDispositivo(teclado);
 mostrarInfoDispositivo(monitor);
 mostrarInfoDispositivo(computadora);
+
+
+/*¿Qué pasa con la clase Orden?
+
+Con respecto a la clase Orden, si bien no hemos creado un método interno que utilice instanceof directamente, se beneficia indirectamente del polimorfismo. 
+La clase Orden almacena objetos de tipo Computadora. La clase Computadora, y a su vez las clases Monitor, Teclado, y Raton que contiene, tienen su propio método toString().
+Cuando el método mostrarOrden() de la clase Orden llama a computadora.toString(), se activa la implementación específica del método toString() de la clase Computadora.
+Si la implementación de toString() en Computadora llama a los toString() de sus componentes, se manifiesta el comportamiento polimórfico de cada uno.*/
