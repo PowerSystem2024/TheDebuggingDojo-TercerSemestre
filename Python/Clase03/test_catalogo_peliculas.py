@@ -35,7 +35,7 @@ def main():
             elif opcion == 3:
                 CatalogoPeliculas.eliminar()
             elif opcion == 4:
-                print("¡Hasta pronto!")
+                print("¡Hasta la próxima!")
             else:
                 print("Opción no válida. Intente de nuevo.")
         except Exception as e:
