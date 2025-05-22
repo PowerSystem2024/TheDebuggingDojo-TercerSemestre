@@ -1,0 +1,161 @@
+/* Estilo general del cuerpo de la página */
+body {
+    background-color: #f3f4f6; /* Color de fondo gris claro */
+    font-family: 'Arial', sans-serif; /* Fuente principal del texto */
+    min-height: 100vh; /* Altura mínima igual a la altura total de la ventana */
+    display: flex; /* Usar modelo de caja flexible */
+    flex-direction: column; /* Coloca los elementos hijos en columna */
+    align-items: center; /* Centra los elementos hijos horizontalmente */
+    justify-content: center; /* Centra los elementos hijos verticalmente */
+    padding: 1rem; /* Espaciado interno de 1 rem alrededor */
+}
+
+/* Estilo del título principal */
+h1 {
+    font-size: 2.25rem; /* Tamaño de fuente grande */
+    font-weight: bold; /* Fuente en negrita */
+    color: #1f2937; /* Color de texto gris oscuro */
+    margin-bottom: 2rem; /* Margen inferior de 2 rem */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo de los subtítulos */
+h2 {
+    font-size: 1.5rem; /* Tamaño de fuente mediano */
+    font-weight: 600; /* Peso de fuente semi-negrita */
+    color: #374151; /* Color de texto gris medio */
+    margin-bottom: 1rem; /* Margen inferior de 1 rem */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo de las secciones */
+section {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+    padding: 1.5rem; /* Espaciado interno */
+    margin-bottom: 1.5rem; /* Margen inferior entre secciones */
+    width: 100%; /* Ocupa el 100% del contenedor padre */
+    max-width: 28rem; /* Ancho máximo fijo */
+}
+
+/* Contenedor para los personajes, en línea horizontal y con salto de línea si no caben */
+.personaje-div {
+    display: flex; /* Disposición en fila flexible */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 1.5rem; /* Espacio entre personajes */
+    flex-wrap: wrap; /* Permite que los elementos bajen a otra línea si no caben */
+}
+
+/* Estilo de las etiquetas de personajes con imagen y nombre */
+.personaje-label {
+    display: flex; /* Contenedor flexible */
+    flex-direction: column; /* Organiza imagen arriba y nombre abajo */
+    align-items: center; /* Centra el contenido horizontalmente */
+    gap: 0.5rem; /* Espacio entre imagen y texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Estilo de las imágenes de personajes */
+.personaje-img {
+    width: 5rem; /* Ancho fijo */
+    height: 6rem; /* Alto fijo */
+    object-fit: cover; /* Ajusta la imagen recortando para que llene el área sin deformarse */
+    border-radius: 0.25rem; /* Bordes ligeramente redondeados */
+}
+
+/* Estilo de los botones de tipo radio */
+input[type="radio"] {
+    accent-color: #2563eb; /* Color personalizado para el botón seleccionado */
+}
+
+/* Estilo general de los botones */
+button {
+    width: 100%; /* Ancho completo del contenedor */
+    padding: 0.5rem; /* Espaciado interno */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    border: none; /* Sin borde */
+    color: #ffffff; /* Color de texto blanco */
+    font-weight: 500; /* Peso medio de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.2s; /* Transición suave al cambiar de color */
+}
+
+/* Estilo del botón de selección de personaje */
+#boton-personaje {
+    background-color: #2563eb; /* Azul como fondo del botón */
+}
+
+/* Cambio de color al pasar el mouse sobre el botón de personaje */
+#boton-personaje:hover {
+    background-color: #1d4ed8; /* Azul más oscuro al hacer hover */
+}
+
+/* Contenedor para los botones de ataque */
+.botones-ataque {
+    display: flex; /* Contenedor flexible */
+    flex-wrap: wrap; /* Permite que los botones pasen a otra línea */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 0.5rem; /* Espacio entre botones */
+}
+
+/* Estilo del botón de ataque de fuego */
+#ataque-fuego {
+    background-color: #ef4444; /* Rojo brillante */
+}
+
+/* Cambio de color al pasar el mouse sobre el botón de fuego */
+#ataque-fuego:hover {
+    background-color: #dc2626; /* Rojo más oscuro */
+}
+
+/* Estilo del botón de ataque de agua */
+#ataque-agua {
+    background-color: #3b82f6; /* Azul claro */
+}
+
+/* Cambio de color al pasar el mouse sobre el botón de agua */
+#ataque-agua:hover {
+    background-color: #2563eb; /* Azul más fuerte */
+}
+
+/* Estilo del botón de ataque de tierra */
+#ataque-tierra {
+    background-color: #22c55e; /* Verde brillante */
+}
+
+/* Cambio de color al pasar el mouse sobre el botón de tierra */
+#ataque-tierra:hover {
+    background-color: #16a34a; /* Verde más oscuro */
+}
+
+/* Estilo del botón de ataque de aire */
+#ataque-aire {
+    background-color: #9ca3af; /* Gris claro */
+}
+
+/* Cambio de color al pasar el mouse sobre el botón de aire */
+#ataque-aire:hover {
+    background-color: #6b7280; /* Gris más oscuro */
+}
+
+/* Estilo para los mensajes dentro del contenedor con id mensajes */
+#mensajes p {
+    text-align: center; /* Centra el texto */
+    color: #374151; /* Color gris medio */
+}
+
+/* Estilo del botón de reinicio */
+#boton-reiniciar {
+    background-color: #4b5563; /* Gris oscuro */
+}
+
+/* Cambio de color al pasar el mouse sobre el botón de reinicio */
+#boton-reiniciar:hover {
+    background-color: #374151; /* Gris más oscuro */
+}
+
+/* Estilo para los elementos <span>, normalmente usado para destacar texto como las vidas */
+span {
+    font-weight: bold; /* Texto en negrita */
+}
