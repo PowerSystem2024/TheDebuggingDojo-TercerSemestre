@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.hanoi-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin: 50px auto;
+  max-width: 900px;
+  min-height: 250px;
+}
+
+.tower {
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid #444;
+  border-radius: 10px;
+  width: 28%;
+  height: 220px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding-bottom: 10px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background 0.3s;
+}
+
+.tower::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -30px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+/* DISK ESTILIZADAS */
+.disk {
+  border-radius: 6px;
+  margin: 5px 0;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  animation: slideUpDown 0.6s ease;
+  transition: all 0.3s ease;
+}
+
+.disk1 {
+  width: 60px;
+  height: 20px;
+  background: linear-gradient(to right, #ff6b6b, #ff4757);
+  border: 2px solid #c0392b;
+}
+
+.disk2 {
+  width: 90px;
+  height: 25px;
+  background: linear-gradient(to right, #74b9ff, #3498db);
+  border: 2px solid #1e3799;
+}
+
+.disk3 {
+  width: 120px;
+  height: 30px;
+  background: linear-gradient(to right, #55efc4, #00b894);
+  border: 2px solid #00897b;
+}
+
+@keyframes slideUpDown {
+  0% { transform: translateY(-20px); opacity: 0.5; }
+  50% { transform: translateY(-10px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.controls {
+  margin-top: 30px;
+}
+
+button {
+  background-color: #2d3436;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #636e72;
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  animation: colorShift 6s linear infinite;
+}
+
+@keyframes colorShift {
+  0% { color: #e17055; }
+  25% { color: #00cec9; }
+  50% { color: #6c5ce7; }
+  75% { color: #fd79a8; }
+  100% { color: #e17055; }
+}
+
+
