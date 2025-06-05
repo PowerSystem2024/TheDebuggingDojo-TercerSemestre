@@ -3,77 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Icono de la pestaña del navegador -->
     <link rel="icon" href="./assets/favicon.ico" type="image/icon" />
-    <!-- Título de la pestaña del navegador -->
-    <title>La Leyenda de Aang</title>
-    <!-- Enlace al archivo de estilos CSS externo -->
-    <link rel="stylesheet" href="./css/style.css">
+    <title>La leyenda de Aang</title>
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-    <!-- Creación del título principal (h1) -->
-    <h1>🔥💧AVATAR🌪️🌱</h1>
-
-    <!-- Contenedor de los personajes disponibles para elegir -->
-     <!-- Cada personaje es un label con imagen, nombre y radio button -->
+    <h1><img src="./assets/fuego.png" alt="Fuego" class="element-icon"> <img src="./assets/agua.png" alt="Agua" class="element-icon"> AVATAR <img src="./assets/aire.png" alt="Aire" class="element-icon"> <img src="./assets/tierra.png" alt="Tierra" class="element-icon"></h1>
     <section id="seleccionar-personaje">
         <h2>Elige tu personaje</h2>
-        <div class="personaje-div">
-            <!-- Personaje Zuko -->
-            <label class="personaje-label">
-                <input type="radio" name="personaje" id="zuko">
-                <img src="./assets/zuko.png" alt="Zuko" class="personaje-img">
-                <span>Zuko</span>
-            </label>
-            <!-- Personaje Katara -->
-            <label class="personaje-label">
-                <input type="radio" name="personaje" id="katara">
-                <img src="./assets/katara.png" alt="Katara" class="personaje-img">
-                <span>Katara</span>
-            </label>
-            <!-- Personaje Aang -->
-            <label class="personaje-label">
-                <input type="radio" name="personaje" id="aang">
-                <img src="./assets/aang.png" alt="Aang" class="personaje-img">
-                <span>Aang</span>
-            </label>
-            <!-- Personaje Toph -->
-            <label class="personaje-label">
-                <input type="radio" name="personaje" id="toph">
-                <img src="./assets/toph.png" alt="Toph" class="personaje-img">
-                <span>Toph</span>
-            </label>
+        <div class="personajes-fila">
+            <div class="personaje-container" id="zuko" onclick="seleccionarPersonaje('zuko')"> <img src="./assets/zuko.png" alt="Zuko">
+                <p>Zuko <img src="./assets/fuego.png" alt="Fuego" class="element-icon"></p>
+            </div>
+            <div class="personaje-container" id="katara" onclick="seleccionarPersonaje('katara')"> <img src="./assets/katara.png" alt="Katara">
+                <p>Katara <img src="./assets/agua.png" alt="Agua" class="element-icon"></p>
+            </div>
+            <div class="personaje-container" id="aang" onclick="seleccionarPersonaje('aang')"> <img src="./assets/aang.png" alt="Aang">
+                <p>Aang <img src="./assets/aire.png" alt="Aire" class="element-icon"></p>
+            </div>
+            <div class="personaje-container" id="toph" onclick="seleccionarPersonaje('toph')"> <img src="./assets/toph.png" alt="Toph">
+                <p>Toph <img src="./assets/tierra.png" alt="Tierra" class="element-icon"></p>
+            </div>
         </div>
-        <!-- Botón para confirmar la selección del personaje -->
-        <button id="boton-personaje">Seleccionar</button>
     </section>
-
-    <!-- Sección para seleccionar el ataque del jugador -->
     <section id="seleccionar-ataque">
         <h2>Elige tu ataque</h2>
-        <!-- Información de vidas del jugador y del enemigo -->
-        <p>Tu personaje tiene <span>3</span> vidas</p>
-        <p>El personaje enemigo tiene <span>3</span> vidas</p>
-        <!-- Botones de ataque disponibles -->
-        <div class="botones-ataque">
-            <button id="ataque-fuego">Fuego 🔥</button>
-            <button id="ataque-agua">Agua 💧</button>
-            <button id="ataque-tierra">Tierra 🌱</button>
-            <button id="ataque-aire">Aire 🌪️</button>
-        </div>
+        <p>Tu personaje <span id="personajeJugador">...</span> tiene 
+            <span id="vidas-jugador-display">
+                <img src="./assets/heart.png" class="vida-icon" id="vida-jugador-1">
+                <img src="./assets/heart.png" class="vida-icon" id="vida-jugador-2">
+                <img src="./assets/heart.png" class="vida-icon" id="vida-jugador-3">
+            </span> vidas
+        </p>
+        <p>El personaje enemigo <span id="personajeEnemigo">...</span> tiene 
+            <span id="vidas-enemigo-display">
+                <img src="./assets/heart.png" class="vida-icon" id="vida-enemigo-1">
+                <img src="./assets/heart.png" class="vida-icon" id="vida-enemigo-2">
+                <img src="./assets/heart.png" class="vida-icon" id="vida-enemigo-3">
+            </span> vidas
+        </p>
+        <p>
+            <button id="ataque-punch">Puño <img src="./assets/punch.png" alt="Puño" class="element-icon"></button>
+            <button id="ataque-kick">Patada <img src="./assets/kick.png" alt="Patada" class="element-icon"></button>
+            <button id="ataque-sweep">Barrida <img src="./assets/sweep.png" alt="Barrida" class="element-icon"></button>
+        </p>
     </section>
-
-    <!-- Sección para mostrar mensajes del combate -->
     <section id="mensajes">
-        <p>Tu personaje atacó con todo el poder del FUEGO, el personaje enemigo atacó con medio poder de TIERRA - GANASTE 🎉</p>
+        <p id="mensaje-personaje">Por favor, selecciona un personaje.</p>
+        <div class="versus-container">
+        <div class="personaje-jugador">
+            <img id="imagen-personaje" alt="Personaje del jugador">
+        </div>
+        <div class="versus-text">vs</div>
+        <div class="personaje-enemigo">
+            <img id="imagen-enemigo" alt="Personaje enemigo">
+        </div>
+    </div>
     </section>
-
-    <!-- Sección para reiniciar el juego -->
     <section id="reiniciar">
         <button id="boton-reiniciar">Reiniciar</button>
     </section>
 
-     <!-- Enlace al archivo JavaScript para funcionalidad -->
+    <footer>
+        <p><a href="https://github.com/orgs/PowerSystem2024/teams/thedebuggingdojo" target="_blank">The Debugging Dojo ©</a> <img src="./assets/the-debugging-dojo-logo.jpg" alt="Debugging Dojo Logo" class="footer-logo"></p>
+        <p>"Mastering code, one bug at a time"</p>
+    </footer>
+
     <script src="./js/avatar.js"></script>
 </body>
 </html>
