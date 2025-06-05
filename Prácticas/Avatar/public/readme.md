@@ -53,6 +53,19 @@ La estructura del proyecto es la siguiente:
 - Se agregó una validación dentro de la función principal para asegurarse de que el personaje seleccionado exista en el sistema.
 - Si se intenta seleccionar un personaje no definido, se muestra un mensaje de error y se ocultan las imágenes.
 
+### 8. Sistema de combate y dinámica de batalla (`avatar.js`, `style.css`)
+- Se implementó la lógica de combate entre el personaje del jugador y un enemigo aleatorio.
+- Al hacer clic en un botón de ataque (**Puño**, **Patada** o **Barrida**), el juego elige un ataque para el enemigo y determina el resultado (victoria, derrota o empate) según reglas tipo *piedra, papel o tijera*.
+- Se muestra un mensaje dinámico indicando qué ataque eligió cada personaje, acompañado por su ícono correspondiente.
+- Si uno de los personajes pierde, se le resta una vida. El sistema visual de vidas ahora cambia los corazones (`heart.png`) por corazones vacíos (`emptyheart.png`) en tiempo real.
+- Cuando uno de los personajes llega a 0 vidas:
+  - Se oculta el personaje perdedor.
+  - Se oculta el texto “vs”.
+  - Se muestra solo la imagen del personaje ganador.
+  - Se despliega un mensaje final animado indicando el resultado del combate.
+  - Se muestra una **frase aleatoria** de felicitación si ganás, o de consuelo si perdés.
+- Se agregaron clases CSS (`.victoria-final`, `.derrota-final`) para estilizar el mensaje de resultado con animaciones (`pulse` o `shake`), colores y fondo destacados.
+
 
 ## Resultado de momento
 
@@ -65,4 +78,3 @@ La estructura del proyecto es la siguiente:
 ---
 
 Desarrollado por [The Debugging Dojo ©](https://github.com/orgs/PowerSystem2024/teams/thedebuggingdojo)  
-*"Mastering code, one bug at a time"*
