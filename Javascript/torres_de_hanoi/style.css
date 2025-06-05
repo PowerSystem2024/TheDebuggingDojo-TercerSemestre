@@ -1,9 +1,15 @@
+/* ---------------------------------------------- */
+/*  Reset general para márgenes y cajas flexibles */
+/* ---------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ---------------------------------------------- */
+/*      Estilos base del cuerpo de la página      */
+/* ---------------------------------------------- */
 body {
   font-family: 'Segoe UI', sans-serif;
   min-height: 100vh;
@@ -15,12 +21,16 @@ body {
   padding: 20px;
 }
 
+/* Animación para el fondo en movimiento */
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
+/* ---------------------------------------------- */
+/*                  Encabezado                    */
+/* ---------------------------------------------- */
 header {
   margin-bottom: 30px;
 }
@@ -35,21 +45,23 @@ h1 {
   color: #555;
 }
 
+/* ---------------------------------------------- */
+/*       Contenedor principal de las torres       */
+/* ---------------------------------------------- */
 .hanoi-container {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
   margin: 50px auto;
   max-width: 900px;
-  min-height: 250px;
 }
 
+/* Estilo individual de cada torre */
 .tower {
   background: rgba(255, 255, 255, 0.3);
   border: 2px solid #444;
   border-radius: 10px;
-  width: 28%;
-  height: 220px;
+  width: 32%;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -57,8 +69,10 @@ h1 {
   position: relative;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: background 0.3s;
+  min-height: 300px;
 }
 
+/* Etiqueta encima de cada torre (A, B, C) */
 .tower::before {
   content: attr(data-label);
   position: absolute;
@@ -68,10 +82,12 @@ h1 {
   color: #222;
 }
 
-/* DISK ESTILIZADAS */
+/* --------------------------------------------- */
+/*            Estilos para los discos            */
+/* --------------------------------------------- */
 .disk {
   border-radius: 6px;
-  margin: 5px 0;
+  margin: 2px 0;
   color: white;
   text-align: center;
   font-weight: bold;
@@ -80,6 +96,7 @@ h1 {
   transition: all 0.3s ease;
 }
 
+/* Discos con tamaños y colores distintos */
 .disk1 {
   width: 60px;
   height: 20px;
@@ -89,44 +106,166 @@ h1 {
 
 .disk2 {
   width: 90px;
-  height: 25px;
+  height: 22px;
   background: linear-gradient(to right, #74b9ff, #3498db);
   border: 2px solid #1e3799;
 }
 
 .disk3 {
   width: 120px;
-  height: 30px;
+  height: 24px;
   background: linear-gradient(to right, #55efc4, #00b894);
   border: 2px solid #00897b;
 }
 
+.disk4 {
+  width: 150px;
+  height: 26px;
+  background: linear-gradient(to right, #ffeaa7, #fdcb6e);
+  border: 2px solid #e17055;
+}
+
+.disk5 {
+  width: 180px;
+  height: 28px;
+  background: linear-gradient(to right, #a29bfe, #6c5ce7);
+  border: 2px solid #4834d4;
+}
+
+.disk6 {
+  width: 210px;
+  height: 30px;
+  background: linear-gradient(to right, #ff7675, #d63031);
+  border: 2px solid #b71540;
+}
+
+.disk7 {
+  width: 240px;
+  height: 32px;
+  background: linear-gradient(to right, #00b894, #00947e);
+  border: 2px solid #00624d;
+}
+
+.disk8 {
+  width: 270px;
+  height: 34px;
+  background: linear-gradient(to right, #e17055, #c25f48);
+  border: 2px solid #993d2b;
+}
+
+/* Animación para el movimiento del disco */
 @keyframes slideUpDown {
   0% { transform: translateY(-20px); opacity: 0.5; }
   50% { transform: translateY(-10px); opacity: 1; }
   100% { transform: translateY(0); opacity: 1; }
 }
 
+/* --------------------------------------------- */
+/*          Controles (slider y botones)         */
+/* --------------------------------------------- */
 .controls {
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
+/* Contenedor del slider */
+.slider-group {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Etiqueta del slider */
+.slider-group label {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilo personalizado del input tipo range */
+input[type="range"] {
+  appearance: none;
+  width: 200px;
+  height: 10px;
+  background: linear-gradient(to right, #a18cd1, #ff9a9e);
+  border-radius: 5px;
+  outline: none;
+  transition: opacity .2s;
+  cursor: pointer;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Estilo del mango del slider */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #6c5ce7;
+  border: 2px solid white;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+/* Efecto hover sobre el mango del slider */
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #8e7dff;
+}
+
+/* Estilo del número que muestra la cantidad de discos */
+output {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #2d3436;
+  min-width: 20px;
+  text-align: left;
+}
+
+/* Contenedor de los botones */
+.button-group {
+  display: flex;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Estilo base de los botones */
 button {
-  background-color: #2d3436;
-  color: white;
+  background-color: #fbc3ea;
+  color: black;
   padding: 12px 25px;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
-  margin: 0 10px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
+/* Cambio de color al pasar el mouse */
 button:hover {
   background-color: #636e72;
 }
 
+/* Icono dentro del botón */
+.button-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* --------------------------------------------- */
+/*             Pie de página animado             */
+/* --------------------------------------------- */
 footer {
   margin-top: 60px;
   font-size: 1.6rem;
@@ -135,6 +274,7 @@ footer {
   animation: colorShift 6s linear infinite;
 }
 
+/* Animación de cambio de color del texto */
 @keyframes colorShift {
   0% { color: #e17055; }
   25% { color: #00cec9; }
@@ -142,5 +282,3 @@ footer {
   75% { color: #fd79a8; }
   100% { color: #e17055; }
 }
-
-

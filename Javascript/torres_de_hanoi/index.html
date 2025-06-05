@@ -3,32 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- icono de la pestaña del navegador -->
+  <link rel="icon" href="./assets/brain.ico" type="image/x-icon" />
+  <!-- título de la página -->
   <title>Torres de Hanoi</title>
+  <!-- enlace a los estilos CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
+    <!-- título principal -->
     <h1>🧠 Torres de Hanoi</h1>
+    <!-- subtítulo -->
     <p class="subtitle">Algoritmo recursivo en JavaScript | Facultad - 2025</p>
   </header>
 
   <main>
+    <!-- sección principal de las torres -->
     <section class="hanoi-container">
       <div id="A" class="tower" data-label="A"></div>
       <div id="B" class="tower" data-label="B"></div>
       <div id="C" class="tower" data-label="C"></div>
     </section>
 
+    <!-- controles de usuario -->
     <div class="controls">
-      <button onclick="startHanoi()">▶️ Iniciar</button>
-      <button onclick="reset()">🔁 Reiniciar</button>
+      <!-- selector de cantidad de discos -->
+      <div class="slider-group"> <label for="numDisks">Cantidad de Discos:</label>
+        <input type="range" id="numDisks" min="3" max="8" value="3" oninput="this.nextElementSibling.value = this.value">
+        <output for="numDisks" id="numDisksValue">3</output>
+      </div>
+      <!-- botones de iniciar y reiniciar -->
+      <div class="button-group">
+        <button onclick="startHanoi()"><img src="./assets/play.png" alt="Iniciar" class="button-icon"> Iniciar</button>
+        <button onclick="reset()"><img src="./assets/reload.png" alt="Reiniciar" class="button-icon"> Reiniciar</button>
+      </div>
     </div>
   </main>
 
+  <!-- pie de página con créditos -->
   <footer>
     Hecho con ❤️ por The Debugging Dojo – UTN 2025
   </footer>
 
+  <!-- script principal en JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
