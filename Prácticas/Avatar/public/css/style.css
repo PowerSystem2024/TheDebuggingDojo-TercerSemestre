@@ -1,454 +1,539 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-image: url('../assets/background.png');
-    background-size: cover;
-    background-position: center top;
-    background-repeat: repeat-y;
-    margin: 0;
-    padding: 10px;
-    min-height: 100vh;
+    font-family: Arial, sans-serif; /* Fuente base del sitio */
+    text-align: center; /* Centrado de texto por defecto */
+    background-image: url('../assets/background.png'); /* Imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el fondo */
+    background-position: center top; /* Posición centrada arriba */
+    background-repeat: repeat-y; /* Repite en vertical */
+    margin: 0; /* Elimina margen exterior */
+    padding: 10px; /* Espaciado interior */
+    min-height: 100vh; /* Altura mínima igual al alto de la pantalla */
 }
 
 h1 {
-    display: inline-block;
-    background-color: rgba(139, 105, 77, 0.9);
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: 2px solid #5a3e2b;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    margin: 15px auto;
-    font-size: 2em;
+    display: inline-block; /* Para aplicar padding y margen centrado */
+    background-color: rgba(139, 105, 77, 0.9); /* Fondo semitransparente */
+    color: #fff; /* Texto blanco */
+    padding: 8px 16px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    border: 2px solid #5a3e2b; /* Borde oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    margin: 15px auto; /* Espaciado y centrado */
+    font-size: 2em; /* Tamaño grande */
 }
 
 h1 img {
-    background-color: #BAA88B;
-    border-radius: 50%;
-    padding: 6px;
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
+    background-color: #BAA88B; /* Establece el color de fondo a un tono beige */
+    border-radius: 50%; /* Hace que la imagen tenga una forma circular (50% de radio de borde) */
+    padding: 6px; /* Agrega un relleno de 6 píxeles alrededor de la imagen */
+    width: 20px; /* Establece el ancho de la imagen a 20 píxeles */
+    height: 20px; /* Establece la altura de la imagen a 20 píxeles */
+    vertical-align: middle; /* Alinea verticalmente la imagen con el texto circundante */
 }
 
 section {
-    margin: 15px auto;
-    padding: 15px 20px;
-    background-color: rgba(200, 180, 150, 0.85);
-    border: 3px solid #5a3e2b;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    max-width: 900px;
+    margin: 15px auto; /* Centrado y separación */
+    padding: 15px 20px; /* Espaciado interno */
+    background-color: rgba(200, 180, 150, 0.85); /* Fondo semitransparente */
+    border: 3px solid #5a3e2b; /* Borde oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    max-width: 900px; /* Ancho máximo */
     width: 90%;
-    color: #333;
-}
-
-#seleccionar-personaje {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#seleccionar-personaje h2 {
-    margin-bottom: 10px;
+    color: #333; /* Texto gris oscuro */
 }
 
 section h2 {
-    color: #5a3e2b;
-    font-weight: bold;
+    color: #5a3e2b; /* Color tierra */
+    font-weight: bold; /* Aplica negrita al texto */
 }
 
 section p {
-    color: #333;
-    font-weight: 500;
+    color: #333; /* Color gris oscuro */
+    font-weight: 500; /* Negrita media */
 }
 
-/* Estilo para el texto de las vidas en #seleccionar-ataque */
+#seleccionar-personaje {
+    display: flex; /* Establece un contenedor flexbox para sus elementos hijos */
+    flex-direction: column; /* Organiza los elementos hijos en una columna vertical */
+    align-items: center; /* Centra los elementos hijos horizontalmente dentro del contenedor flex */
+}
+
+#seleccionar-personaje h2 {
+    margin-bottom: 10px; /* Añade un margen inferior de 10 píxeles al encabezado h2 */
+}
+
 #seleccionar-ataque p {
-    margin: 10px 0;
-    font-size: 16px;
+    margin: 10px 0; /* Establece un margen superior e inferior de 10 píxeles, y 0 a los lados para los párrafos */
+    font-size: 16px; /* Define el tamaño de la fuente de los párrafos a 16 píxeles */
 }
 
 #seleccionar-ataque p span {
-    background-color: rgba(139, 105, 77, 0.3);
-    padding: 2px 8px;
-    border-radius: 5px;
-    color: #5a3e2b;
-    font-weight: bold;
+    background-color: rgba(139, 105, 77, 0.3); /* Establece un color de fondo semi-transparente (marrón claro) */
+    padding: 2px 8px; /* Añade un relleno de 2 píxeles arriba y abajo, y 8 píxeles a los lados */
+    border-radius: 5px; /* Redondea las esquinas del fondo con un radio de 5 píxeles */
+    color: #5a3e2b; /* Establece el color del texto a un tono tierra */
+    font-weight: bold; /* Aplica negrita al texto */
 }
 
 button {
-    padding: 8px 16px;
-    margin: 5px;
-    cursor: pointer;
-    border: 2px solid #5a3e2b;
-    border-radius: 5px;
-    font-size: 14px;
-    background-color: rgba(139, 105, 77, 0.7);
-    color: #fff;
-    transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+    padding: 8px 16px; /* Relleno interno del botón (arriba/abajo, izquierda/derecha) */
+    margin: 5px; /* Margen externo del botón */
+    cursor: pointer; /* Cambia el cursor a una mano cuando está sobre el botón */
+    border: 2px solid #5a3e2b; /* Borde sólido de 2px con color tierra */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    font-size: 14px; /* Tamaño de la fuente del texto del botón */
+    background-color: rgba(139, 105, 77, 0.7); /* Color de fondo del botón con cierta transparencia */
+    color: #fff; /* Color del texto del botón (blanco) */
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s; /* Transiciones suaves para cambios de fondo, tamaño y sombra */
 }
 
-/* Añadir más espacio entre botones y efectos de hover */
 #seleccionar-ataque p {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px; /* Más espacio entre botones */
+    display: flex; /* Convierte el párrafo en un contenedor flexbox */
+    flex-wrap: wrap; /* Permite que los elementos flex se envuelvan a la siguiente línea si no hay suficiente espacio */
+    justify-content: center; /* Centra los elementos flex horizontalmente */
+    gap: 10px; /* Establece un espacio de 10px entre los elementos flex (botones) */
 }
 
 button:hover:not(:disabled) {
-    background-color: rgba(139, 105, 77, 1);
-    transform: scale(1.05); /* Pequeño aumento de tamaño al pasar el cursor */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Sombra al pasar el cursor */
+    background-color: rgba(139, 105, 77, 1); /* Cambia el color de fondo a un tono más sólido al pasar el cursor (si no está deshabilitado) */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón al pasar el cursor */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra al botón al pasar el cursor */
 }
 
 button:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-    background-color: rgba(139, 105, 77, 0.3);
+    cursor: not-allowed; /* Cambia el cursor a "no permitido" cuando el botón está deshabilitado */
+    opacity: 0.5; /* Reduce la opacidad del botón cuando está deshabilitado */
+    background-color: rgba(139, 105, 77, 0.3); /* Cambia el color de fondo a un tono más claro cuando está deshabilitado */
 }
 
 .personaje-container {
-    margin: 5px;
-    text-align: center;
-    padding: 8px;
-    cursor: pointer;
-    border: 2px solid #5a3e2b;
-    border-radius: 5px;
-    background-color: rgba(139, 105, 77, 0.7);
-    color: #fff;
-    transition: background-color 0.3s;
-    flex: 1;
-    max-width: 150px;
+    margin: 5px; /* Margen exterior alrededor de cada contenedor de personaje */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    padding: 8px; /* Relleno interior del contenedor */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el contenedor */
+    border: 2px solid #5a3e2b; /* Borde sólido de 2px con color tierra */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    background-color: rgba(139, 105, 77, 0.7); /* Color de fondo del contenedor con cierta transparencia */
+    color: #fff; /* Color del texto dentro del contenedor (blanco) */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+    flex: 1; /* Permite que el elemento se expanda y contraiga dentro de un contenedor flex */
+    max-width: 150px; /* Ancho máximo del contenedor */
 }
 
 #seleccionar-personaje .personajes-fila {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 10px;
+    display: flex; /* Establece un contenedor flexbox para las filas de personajes */
+    justify-content: center; /* Centra los elementos hijos horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no hay suficiente espacio */
+    width: 100%; /* La fila ocupa el 100% del ancho disponible */
+    gap: 10px; /* Espacio de 10px entre los elementos de la fila */
 }
 
 .personaje-container:hover {
-    background-color: rgba(139, 105, 77, 1);
+    background-color: rgba(139, 105, 77, 1); /* Cambia el color de fondo a un tono más sólido al pasar el cursor */
 }
 
 .personaje-container img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 5px;
-    max-height: 150px;
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho de su contenedor padre */
+    height: auto; /* Mantiene la proporción de la imagen al ajustar el ancho */
+    margin-bottom: 5px; /* Margen inferior de 5 píxeles */
+    max-height: 150px; /* Altura máxima de la imagen de 150 píxeles */
 }
 
 .personaje-container p {
-    margin: 5px 0 0 0;
-    font-size: 14px;
-    font-weight: bold;
+    margin: 5px 0 0 0; /* Margen superior de 5 píxeles, sin margen en los otros lados */
+    font-size: 14px; /* Tamaño de fuente de 14 píxeles */
+    font-weight: bold; /* Texto en negrita */
 }
 
-
-
 #mensajes {
-    font-weight: bold;
-    color: #333;
+    font-weight: bold; /* Texto en negrita */
+    color: #333; /* Color del texto gris oscuro */
 }
 
 #mensajes .versus-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
+    display: flex; /* Establece un contenedor flexbox para sus elementos hijos */
+    align-items: center; /* Alinea los elementos hijos verticalmente al centro */
+    justify-content: center; /* Centra los elementos hijos horizontalmente */
+    gap: 20px; /* Espacio de 20 píxeles entre los elementos hijos */
+    margin-top: 10px; /* Margen superior de 10 píxeles */
 }
 
 #mensajes .personaje-jugador, #mensajes .personaje-enemigo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 200px;
+    display: flex; /* Establece un contenedor flexbox para el jugador y el enemigo */
+    flex-direction: column; /* Organiza los elementos hijos en una columna vertical */
+    align-items: center; /* Centra los elementos hijos horizontalmente */
+    max-width: 200px; /* Ancho máximo de 200 píxeles para el contenedor */
 }
 
 #mensajes .personaje-jugador img, #mensajes .personaje-enemigo img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    max-height: 150px;
-    display: none; /* Se mostrará cuando se seleccione un personaje */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho de su contenedor padre */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes ligeramente redondeados */
+    max-height: 150px; /* Altura máxima de la imagen de 150 píxeles */
+    display: none; /* Oculta la imagen por defecto */
 }
 
 #mensajes .versus-text {
-    font-size: 24px;
-    font-weight: bold;
-    color: #5a3e2b;
+    font-size: 24px; /* Tamaño de fuente de 24 píxeles */
+    font-weight: bold; /* Texto en negrita */
+    color: #5a3e2b; /* Color del texto tierra */
 }
 
 #mensaje-personaje.victoria-final {
-    background-color: rgba(0, 255, 0, 0.1);
-    color: green;
-    font-size: 18px;
-    border: 2px solid green;
-    padding: 10px;
-    border-radius: 8px;
-    animation: pulse-victory 1s ease-in-out infinite alternate;
+    background-color: rgba(0, 255, 0, 0.1); /* Color de fondo verde semi-transparente */
+    color: green; /* Color del texto verde */
+    font-size: 18px; /* Tamaño de fuente de 18 píxeles */
+    border: 2px solid green; /* Borde sólido de 2px de color verde */
+    padding: 10px; /* Relleno interior de 10 píxeles */
+    border-radius: 8px; /* Bordes redondeados de 8 píxeles */
+    animation: pulse-victory 1s ease-in-out infinite alternate; /* Aplica una animación de "pulso" */
 }
 
 #mensaje-personaje.derrota-final {
-    background-color: rgba(255, 0, 0, 0.1);
-    color: darkred;
-    font-size: 18px;
-    border: 2px solid darkred;
-    padding: 10px;
-    border-radius: 8px;
-    animation: shake-lose 0.5s ease-in-out 3;
+    background-color: rgba(255, 0, 0, 0.1); /* Color de fondo rojo semi-transparente para indicar derrota */
+    color: darkred; /* Color del texto rojo oscuro */
+    font-size: 18px; /* Tamaño de fuente de 18 píxeles */
+    border: 2px solid darkred; /* Borde sólido de 2px de color rojo oscuro */
+    padding: 10px; /* Relleno interior de 10 píxeles */
+    border-radius: 8px; /* Bordes redondeados de 8 píxeles */
+    animation: shake-lose 0.5s ease-in-out 3; /* Aplica una animación de "agitación" al perder, que se repite 3 veces */
 }
 
 @keyframes pulse-victory {
-    from { transform: scale(1); }
-    to { transform: scale(1.05); }
+    from { transform: scale(1); } /* Inicia la animación con un tamaño normal */
+    to { transform: scale(1.05); } /* Termina la animación con un ligero aumento de tamaño */
 }
 
 @keyframes shake-lose {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
+    0%, 100% { transform: translateX(0); } /* Al inicio y al final, no hay desplazamiento horizontal */
+    25% { transform: translateX(-5px); } /* Se desplaza 5 píxeles a la izquierda */
+    50% { transform: translateX(5px); } /* Se desplaza 5 píxeles a la derecha */
+    75% { transform: translateX(-5px); } /* Se desplaza 5 píxeles a la izquierda nuevamente */
 }
 
 #mensaje-personaje {
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    /* ... otros estilos existentes ... */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transiciones suaves para los cambios de color y transformación */
 }
 
 #mensaje-personaje.win {
-    color: green;
-    transform: scale(1.1);
+    color: green; /* Cambia el color del texto a verde cuando se gana */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del texto cuando se gana */
 }
 
 #mensaje-personaje.lose {
-    color: red;
-    transform: scale(1.1);
+    color: red; /* Cambia el color del texto a rojo cuando se pierde */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del texto cuando se pierde */
 }
 
 #mensaje-personaje.tie {
-    color: orange;
-    transform: scale(1.1);
+    color: orange; /* Cambia el color del texto a naranja cuando hay un empate */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del texto cuando hay un empate */
 }
 
 #imagen-personaje, #imagen-enemigo {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 10px;
-    max-height: 200px;
-    display: none;
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho de su contenedor padre */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes ligeramente redondeados */
+    margin-top: 10px; /* Margen superior de 10 píxeles */
+    max-height: 200px; /* Altura máxima de la imagen de 200 píxeles */
+    display: none; /* Oculta la imagen por defecto */
+}
+
+#mensaje-personaje.neutro-inicial {
+    background-color: rgba(250, 235, 200, 0.4); /* Color de fondo beige muy claro y semi-transparente */
+    color: #5a3e2b; /* Color del texto tierra */
+    border: 2px dashed #BAA88B; /* Borde punteado de 2px de color beige */
+    padding: 10px 14px; /* Relleno interior de 10px arriba/abajo y 14px izquierda/derecha */
+    border-radius: 10px; /* Bordes redondeados de 10 píxeles */
+    font-size: 16px; /* Tamaño de fuente de 16 píxeles */
+    font-weight: bold; /* Texto en negrita */
+    box-shadow: 0 0 5px rgba(90, 62, 43, 0.3); /* Sombra suave alrededor del cuadro de mensaje */
 }
 
 .element-icon {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    margin-left: 5px;
+    width: 20px; /* Ancho del ícono de elemento */
+    height: 20px; /* Alto del ícono de elemento */
+    vertical-align: middle; /* Alinea el ícono verticalmente al centro con el texto o elementos adyacentes */
+    margin-left: 5px; /* Margen a la izquierda del ícono */
 }
 
 .vida-icon {
-    width: 25px; /* Ajusta el tamaño */
-    height: 25px;
-    margin: 0 2px;
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    width: 25px; /* Ajusta el ancho del ícono de vida */
+    height: 25px; /* Alto del ícono de vida */
+    margin: 0 2px; /* Margen superior/inferior de 0 y margen izquierdo/derecho de 2 píxeles */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transiciones suaves para la opacidad y la transformación */
 }
 
 .vida-icon.lost {
-    opacity: 0;
-    transform: scale(0.5);
-    /* O podrías usar display: none; después de una pequeña animación si prefieres */
+    opacity: 0; /* Hace que el ícono sea completamente transparente cuando tiene la clase 'lost' */
+    transform: scale(0.5); /* Reduce el tamaño del ícono a la mitad cuando tiene la clase 'lost' */
 }
 
 .personaje-jugador img, .personaje-enemigo img {
-    transition: transform 0.2s ease-out; /* Transición para la animación de ataque */
+    transition: transform 0.2s ease-out; /* Aplica una transición suave al transformar las imágenes de los personajes */
 }
 
 .personaje-jugador img.attacking {
-    transform: translateX(10px) rotate(5deg); /* Ejemplo de ataque de jugador */
+    transform: translateX(10px) rotate(5deg); /* Desplaza la imagen del jugador 10 píxeles a la derecha y la rota 5 grados al atacar */
 }
 
 .personaje-enemigo img.attacking {
-    transform: translateX(-10px) rotate(-5deg); /* Ejemplo de ataque de enemigo */
+    transform: translateX(-10px) rotate(-5deg); /* Desplaza la imagen del enemigo 10 píxeles a la izquierda y la rota -5 grados al atacar */
+}
+
+/* boton con las reglas de juego */
+.instrucciones-container {
+    margin-top: -10px; /* Establece un margen superior negativo para acercar el botón a los elementos de arriba */
+    margin-bottom: 10px; /* Agrega un margen inferior de 10 píxeles */
+}
+
+.instrucciones-container button {
+    background-color: #BAA88B; /* Color de fondo del botón (beige) */
+    color: #5a3e2b; /* Color del texto del botón (tierra) */
+    border: 2px solid #5a3e2b; /* Borde sólido de 2px con color tierra */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 14px; /* Tamaño de la fuente del texto del botón */
+    padding: 6px 12px; /* Relleno interno del botón (arriba/abajo, izquierda/derecha) */
+    border-radius: 6px; /* Bordes ligeramente redondeados */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves para cambios de fondo y transformación */
+}
+
+.instrucciones-container button:hover {
+    background-color: #5a3e2b; /* Cambia el color de fondo a un tono tierra más oscuro al pasar el cursor */
+    color: #fff; /* Cambia el color del texto a blanco al pasar el cursor */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón al pasar el cursor */
+}
+
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed; /* Fija el modal en la ventana de visualización */
+    z-index: 100; /* Asegura que el modal esté por encima de otros elementos */
+    left: 0; /* Posiciona el modal desde el borde izquierdo */
+    top: 0; /* Posiciona el modal desde el borde superior */
+    width: 100%; /* El modal ocupa todo el ancho de la pantalla */
+    height: 100%; /* El modal ocupa todo el alto de la pantalla */
+    overflow: auto; /* Permite desplazamiento si el contenido excede el tamaño del modal */
+    background-color: rgba(0,0,0,0.6); /* Color de fondo oscuro y semi-transparente para el overlay */
+    opacity: 0; /* Inicia con una opacidad de 0 para la transición */
+    transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+}
+
+.modal.mostrar-modal {
+    display: block; /* Muestra el modal */
+    opacity: 1; /* Establece la opacidad a 1 para que sea visible */
+}
+
+.modal-content {
+    background-color: rgba(250, 235, 200, 0.95); /* Color de fondo del contenido del modal (beige claro con ligera transparencia) */
+    background-size: cover; /* Asegura que la imagen de fondo cubra todo el contenido */
+    border: 3px solid #5a3e2b; /* Borde sólido de 3px con color tierra */
+    margin: 10% auto; /* Margen superior/inferior del 10% y centrado horizontalmente */
+    padding: 25px 30px; /* Relleno interno del contenido (arriba/abajo, izquierda/derecha) */
+    border-radius: 15px; /* Bordes redondeados de 15 píxeles */
+    width: 85%; /* Ancho del contenido del modal */
+    max-width: 500px; /* Ancho máximo del contenido del modal */
+    box-shadow: 0 0 15px #000; /* Sombra alrededor del contenido del modal */
+    text-align: center; /* Centra el texto dentro del contenido del modal */
+    font-family: 'Georgia', serif; /* Fuente del texto del contenido del modal */
+    color: #3e2f1c; /* Color del texto del contenido del modal (marrón oscuro) */
+}
+
+.lista-reglas {
+    list-style: none; /* Elimina los marcadores de lista predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado de la lista */
+    margin: 15px 0; /* Establece un margen superior e inferior de 15 píxeles, y 0 a los lados */
+}
+
+.lista-reglas li {
+    display: flex; /* Establece cada elemento de la lista como un contenedor flexbox */
+    align-items: center; /* Alinea los elementos hijos verticalmente al centro */
+    justify-content: center; /* Centra los elementos hijos horizontalmente */
+    gap: 10px; /* Agrega un espacio de 10 píxeles entre los elementos hijos */
+    margin: 8px 0; /* Establece un margen superior e inferior de 8 píxeles, y 0 a los lados para cada elemento de la lista */
+    font-size: 16px; /* Tamaño de fuente de 16 píxeles */
+}
+
+.lista-reglas img {
+    width: 24px; /* Ancho de la imagen de la lista */
+    height: 24px; /* Alto de la imagen de la lista */
+    vertical-align: middle; /* Alinea la imagen verticalmente al centro con el texto adyacente */
 }
 
 footer {
-    margin: 20px auto;
-    padding: 15px;
-    background-color: rgba(139, 105, 77, 0.9);
-    border: 2px solid #5a3e2b;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    max-width: 900px;
-    width: 90%;
-    color: #fff;
-    text-align: center;
-    font-size: 14px;
+    margin: 20px auto; /* Margen superior e inferior de 20px y centrado horizontalmente */
+    padding: 15px; /* Relleno interior de 15px */
+    background-color: rgba(139, 105, 77, 0.9); /* Color de fondo marrón con 90% de opacidad */
+    border: 2px solid #5a3e2b; /* Borde sólido de 2px con color tierra */
+    border-radius: 8px; /* Bordes redondeados de 8px */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil debajo del pie de página */
+    max-width: 900px; /* Ancho máximo de 900px */
+    width: 90%; /* Ocupa el 90% del ancho disponible */
+    color: #fff; /* Color del texto blanco */
+    text-align: center; /* Centra el texto */
+    font-size: 14px; /* Tamaño de fuente de 14px */
 }
 
 footer p {
-    margin: 5px 0;
+    margin: 5px 0; /* Margen superior e inferior de 5px para los párrafos dentro del pie de página */
 }
 
 /* Estilo para el enlace del footer */
 footer a {
-    color: #BAA88B;
-    text-decoration: none;
-    transition: color 0.3s, text-decoration 0.3s;
+    color: #BAA88B; /* Color del enlace (beige) */
+    text-decoration: none; /* Sin subrayado en el enlace */
+    transition: color 0.3s, text-decoration 0.3s; /* Transición suave para el color y el subrayado */
 }
 
 footer a:hover {
-    color: #fff;
-    text-decoration: underline;
+    color: #fff; /* Cambia el color del enlace a blanco al pasar el cursor */
+    text-decoration: underline; /* Subraya el enlace al pasar el cursor */
 }
 
 .footer-logo {
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-    margin-left: 10px;
-    border-radius: 50%;
-    background-color: #BAA88B;
-    padding: 4px;
-    transition: transform 0.3s;
+    width: 30px; /* Ancho del logo en el pie de página */
+    height: 30px; /* Alto del logo en el pie de página */
+    vertical-align: middle; /* Alinea el logo verticalmente al centro con el texto adyacente */
+    margin-left: 10px; /* Margen a la izquierda del logo */
+    border-radius: 50%; /* Hace que el logo sea circular */
+    background-color: #BAA88B; /* Color de fondo del logo (beige) */
+    padding: 4px; /* Relleno interno del logo */
+    transition: transform 0.3s; /* Transición suave para la propiedad 'transform' */
 }
 
 .footer-logo:hover {
-    transform: scale(1.1); /* Pequeño aumento de tamaño al pasar el cursor */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del logo al pasar el cursor */
 }
 
 @media (max-width: 768px) {
+    /* Estilos para pantallas con un ancho máximo de 768 píxeles (dispositivos móviles o tabletas) */
     body {
-        padding: 5px;
+        padding: 5px; /* Reduce el relleno del cuerpo para pantallas más pequeñas */
     }
 
     h1 {
-        font-size: 1.5em;
-        padding: 6px 12px;
+        font-size: 1.5em; /* Reduce el tamaño de fuente del encabezado principal */
+        padding: 6px 12px; /* Ajusta el relleno del encabezado */
     }
 
     section {
-        padding: 10px 15px;
-        width: 95%;
+        padding: 10px 15px; /* Ajusta el relleno de las secciones */
+        width: 95%; /* Establece el ancho de las secciones al 95% */
     }
 
     #seleccionar-ataque p {
-        gap: 8px; /* Reducimos el espacio entre botones */
+        gap: 8px; /* Reduce el espacio entre los botones de ataque */
     }
 
     #seleccionar-ataque p span {
-        padding: 2px 6px;
+        padding: 2px 6px; /* Ajusta el relleno de los spans dentro de los párrafos de ataque */
     }
 
     .personaje-container {
-        max-width: 120px;
-        padding: 6px;
+        max-width: 120px; /* Reduce el ancho máximo de los contenedores de personaje */
+        padding: 6px; /* Reduce el relleno de los contenedores de personaje */
     }
 
     .personaje-container img {
-        max-height: 120px;
+        max-height: 120px; /* Reduce la altura máxima de las imágenes de personaje */
     }
 
     .personaje-container p {
-        font-size: 12px;
+        font-size: 12px; /* Reduce el tamaño de fuente de los párrafos de personaje */
     }
 
     button {
-        padding: 6px 12px;
-        font-size: 12px;
+        padding: 6px 12px; /* Reduce el relleno de los botones */
+        font-size: 12px; /* Reduce el tamaño de fuente de los botones */
     }
 
     .element-icon {
-        width: 16px;
-        height: 16px;
+        width: 16px; /* Reduce el ancho de los íconos de elemento */
+        height: 16px; /* Reduce el alto de los íconos de elemento */
     }
 
     #seleccionar-ataque p {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5px;
+        display: flex; /* Asegura que se mantenga como flexbox */
+        flex-wrap: wrap; /* Permite el ajuste de los elementos */
+        justify-content: center; /* Centra los elementos */
+        gap: 5px; /* Reduce el espacio entre los botones de ataque en pantallas pequeñas */
     }
 
     #mensajes .versus-container {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: column; /* Cambia la dirección de los elementos a columna en el contenedor "versus" */
+        gap: 10px; /* Reduce el espacio entre los elementos en el contenedor "versus" */
     }
 
     #mensajes .versus-text {
-        font-size: 20px;
+        font-size: 20px; /* Reduce el tamaño de fuente del texto "versus" */
     }
 
     #mensajes .personaje-jugador img, #mensajes .personaje-enemigo img {
-        max-height: 120px;
+        max-height: 120px; /* Reduce la altura máxima de las imágenes de jugador/enemigo en la sección de mensajes */
     }
 
     footer {
-        padding: 10px;
-        font-size: 12px;
+        padding: 10px; /* Reduce el relleno del pie de página */
+        font-size: 12px; /* Reduce el tamaño de fuente del pie de página */
     }
 
     .footer-logo {
-        width: 25px;
-        height: 25px;
+        width: 25px; /* Reduce el ancho del logo en el pie de página */
+        height: 25px; /* Reduce el alto del logo en el pie de página */
     }
 }
 
 @media (max-width: 480px) {
+    /* Estilos para pantallas con un ancho máximo de 480 píxeles (teléfonos muy pequeños) */
     h1 {
-        font-size: 1.2em;
+        font-size: 1.2em; /* Reduce aún más el tamaño de fuente del encabezado principal */
     }
 
     section {
-        padding: 8px 10px;
+        padding: 8px 10px; /* Ajusta el relleno de las secciones para pantallas muy pequeñas */
     }
 
     #seleccionar-ataque p {
-        gap: 6px; /* Reducimos aún más el espacio */
+        gap: 6px; /* Reduce aún más el espacio entre los botones de ataque */
     }
 
     #seleccionar-ataque p span {
-        padding: 1px 4px;
+        padding: 1px 4px; /* Ajusta el relleno de los spans para pantallas muy pequeñas */
     }
 
     .personaje-container {
-        max-width: 100px;
+        max-width: 100px; /* Reduce el ancho máximo de los contenedores de personaje */
     }
 
     .personaje-container img {
-        max-height: 100px;
+        max-height: 100px; /* Reduce la altura máxima de las imágenes de personaje */
     }
 
     button {
-        padding: 5px 10px;
-        font-size: 11px;
+        padding: 5px 10px; /* Reduce el relleno de los botones */
+        font-size: 11px; /* Reduce el tamaño de fuente de los botones */
     }
 
     .element-icon {
-        width: 14px;
-        height: 14px;
+        width: 14px; /* Reduce el ancho de los íconos de elemento */
+        height: 14px; /* Reduce el alto de los íconos de elemento */
     }
 
     #mensajes .versus-text {
-        font-size: 16px;
+        font-size: 16px; /* Reduce el tamaño de fuente del texto "versus" */
     }
 
     #mensajes .personaje-jugador img, #mensajes .personaje-enemigo img {
-        max-height: 100px;
+        max-height: 100px; /* Reduce la altura máxima de las imágenes de jugador/enemigo en la sección de mensajes */
     }
 
     footer {
-        padding: 8px;
-        font-size: 10px;
+        padding: 8px; /* Reduce el relleno del pie de página */
+        font-size: 10px; /* Reduce el tamaño de fuente del pie de página */
     }
 
     .footer-logo {
-        width: 20px;
-        height: 20px;
+        width: 20px; /* Reduce el ancho del logo en el pie de página */
+        height: 20px; /* Reduce el alto del logo en el pie de página */
     }
 }

@@ -66,6 +66,11 @@ La estructura del proyecto es la siguiente:
   - Se muestra una **frase aleatoria** de felicitación si ganás, o de consuelo si perdés.
 - Se agregaron clases CSS (`.victoria-final`, `.derrota-final`) para estilizar el mensaje de resultado con animaciones (`pulse` o `shake`), colores y fondo destacados.
 
+### 9. Funcionalidades adicionales y corrección de errores
+
+- Se corrigieron pequeños errores en la lógica de actualización de vidas y mensajes.
+- Se añadió un botón "Instrucciones" en la interfaz. Al hacer clic, se abre un modal con las reglas del juego (Patada vence a Puño, Puño vence a Barrida, Barrida vence a Patada).
+- El modal es responsive y se cierra al hacer clic fuera de él o en el botón de cerrar.
 
 ## Resultado de momento
 

@@ -3,31 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ícono de pestaña del navegador -->
     <link rel="icon" href="./assets/favicon.ico" type="image/icon" />
+    <!-- Título de la página -->
     <title>La leyenda de Aang</title>
+    <!-- Enlace al archivo de estilos CSS -->
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
+    <!-- Título principal con íconos de los cuatro elementos -->
     <h1><img src="./assets/fuego.png" alt="Fuego" class="element-icon"> <img src="./assets/agua.png" alt="Agua" class="element-icon"> AVATAR <img src="./assets/aire.png" alt="Aire" class="element-icon"> <img src="./assets/tierra.png" alt="Tierra" class="element-icon"></h1>
+    
+    <!-- Botón para abrir las instrucciones -->
+    <div class="instrucciones-container">
+        <button id="btnInstrucciones">📜 Instrucciones 📜</button>
+    </div>
+    <!-- Modal de instrucciones -->
+    <div id="modalInstrucciones" class="modal">
+        <div class="modal-content">
+            <!-- Botón para cerrar el modal -->
+            <span class="close">&times;</span>
+             <!-- Explicación básica del juego -->
+            <h2>📜 Reglas del Juego</h2>
+            <p>Seleccioná un personaje para comenzar.<br>Ambos tienen <strong>3 vidas</strong>.</p>
+            <p>Ataca con uno de los siguientes movimientos:</p>
+            <!-- Lista de reglas de combate -->
+            <ul class="lista-reglas">
+                <li><strong>Patada</strong><img src="./assets/kick.png" alt="Patada"> vence a <strong>Puño</strong><img src="./assets/punch.png" alt="Puño"></li>
+                <li><strong>Puño</strong><img src="./assets/punch.png" alt="Puño"> vence a <strong>Barrida</strong><img src="./assets/sweep.png" alt="Barrida"></li>
+                <li><strong>Barrida</strong><img src="./assets/sweep.png" alt="Barrida"> vence a <strong>Patada</strong><img src="./assets/kick.png" alt="Patada"></li>
+            </ul>
+            <p>¡Consultá esto cuando lo necesites!</p>
+        </div>
+    </div>
+    
+    <!-- Sección para seleccionar personaje -->
     <section id="seleccionar-personaje">
         <h2>Elige tu personaje</h2>
         <div class="personajes-fila">
+            <!-- Personaje: Zuko -->
             <div class="personaje-container" id="zuko" onclick="seleccionarPersonaje('zuko')"> <img src="./assets/zuko.png" alt="Zuko">
                 <p>Zuko <img src="./assets/fuego.png" alt="Fuego" class="element-icon"></p>
             </div>
+            <!-- Personaje: Katara -->
             <div class="personaje-container" id="katara" onclick="seleccionarPersonaje('katara')"> <img src="./assets/katara.png" alt="Katara">
                 <p>Katara <img src="./assets/agua.png" alt="Agua" class="element-icon"></p>
             </div>
+            <!-- Personaje: Aang -->
             <div class="personaje-container" id="aang" onclick="seleccionarPersonaje('aang')"> <img src="./assets/aang.png" alt="Aang">
                 <p>Aang <img src="./assets/aire.png" alt="Aire" class="element-icon"></p>
             </div>
+            <!-- Personaje: Toph -->
             <div class="personaje-container" id="toph" onclick="seleccionarPersonaje('toph')"> <img src="./assets/toph.png" alt="Toph">
                 <p>Toph <img src="./assets/tierra.png" alt="Tierra" class="element-icon"></p>
             </div>
         </div>
     </section>
+
+    <!-- Sección para seleccionar ataque -->
     <section id="seleccionar-ataque">
         <h2>Elige tu ataque</h2>
+        <!-- Vidas del jugador -->
         <p>Tu personaje <span id="personajeJugador">...</span> tiene 
             <span id="vidas-jugador-display">
                 <img src="./assets/heart.png" class="vida-icon" id="vida-jugador-1">
@@ -35,6 +71,7 @@
                 <img src="./assets/heart.png" class="vida-icon" id="vida-jugador-3">
             </span> vidas
         </p>
+        <!-- Vidas del enemigo -->
         <p>El personaje enemigo <span id="personajeEnemigo">...</span> tiene 
             <span id="vidas-enemigo-display">
                 <img src="./assets/heart.png" class="vida-icon" id="vida-enemigo-1">
@@ -42,33 +79,45 @@
                 <img src="./assets/heart.png" class="vida-icon" id="vida-enemigo-3">
             </span> vidas
         </p>
+        <!-- Botones de ataque -->
         <p>
             <button id="ataque-punch">Puño <img src="./assets/punch.png" alt="Puño" class="element-icon"></button>
             <button id="ataque-kick">Patada <img src="./assets/kick.png" alt="Patada" class="element-icon"></button>
             <button id="ataque-sweep">Barrida <img src="./assets/sweep.png" alt="Barrida" class="element-icon"></button>
         </p>
     </section>
+
+    <!-- Sección de mensajes y combate -->
     <section id="mensajes">
+        <!-- Mensaje inicial -->
         <p id="mensaje-personaje">Por favor, selecciona un personaje.</p>
+        <!-- Contenedor del combate visual -->
         <div class="versus-container">
-        <div class="personaje-jugador">
-            <img id="imagen-personaje" alt="Personaje del jugador">
-        </div>
-        <div class="versus-text">vs</div>
-        <div class="personaje-enemigo">
-            <img id="imagen-enemigo" alt="Personaje enemigo">
-        </div>
-    </div>
+            <!-- Imagen del personaje del jugador -->
+            <div class="personaje-jugador">
+                <img id="imagen-personaje" alt="Personaje del jugador">
+            </div>
+            <!-- Texto "vs" -->
+            <div class="versus-text">vs</div>
+            <!-- Imagen del personaje enemigo -->
+            <div class="personaje-enemigo">
+                <img id="imagen-enemigo" alt="Personaje enemigo">
+            </div>
+        </div>  
     </section>
+
+    <!-- Botón para reiniciar el juego -->
     <section id="reiniciar">
         <button id="boton-reiniciar">Reiniciar</button>
     </section>
 
+    <!-- Pie de página con créditos -->
     <footer>
         <p><a href="https://github.com/orgs/PowerSystem2024/teams/thedebuggingdojo" target="_blank">The Debugging Dojo ©</a> <img src="./assets/the-debugging-dojo-logo.jpg" alt="Debugging Dojo Logo" class="footer-logo"></p>
         <p>"Mastering code, one bug at a time"</p>
     </footer>
 
+    <!-- Enlace al archivo JavaScript principal -->
     <script src="./js/avatar.js"></script>
 </body>
 </html>
