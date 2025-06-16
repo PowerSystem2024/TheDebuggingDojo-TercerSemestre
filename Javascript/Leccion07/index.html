@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problema de las N Reinas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="icon.ico" type="image/icon" />
+</head>
+<body>
+    <h1>Problema de las N Reinas</h1>
+    <label for="nInput">Ingrese valor de N (mínimo 8):</label>
+    <input type="number" id="nInput" value="8" min="8" />
+    <button onclick="resolver()">Resolver</button>
+    <p id="estado"></p>
+    <div id="tablero" class="tablero"></div>
+    <p><strong>Índices de reinas por fila (última solución):</strong></p>
+    <pre id="arreglo"></pre>
+    <div id="todasLasSoluciones"></div>
+
+    <script src="EjercicioClase07.js"></script>
+
+</body>
+</html>

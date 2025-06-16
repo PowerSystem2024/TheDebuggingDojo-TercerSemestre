@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;                /* Usa la fuente Arial y si no está disponible, una sin serifas. */
+    text-align: center;                            /* Centra horizontalmente el texto dentro del body. */
+    background-color: #1e1e1e;                   /* Fija un color de fondo oscuro. */
+    color: #fff;                                 /* Establece el color del texto a blanco. */
+    display: flex;                                 /* Convierte el body en un contenedor flex. */
+    flex-direction: column;                        /* Organiza sus hijos en columna. */
+    align-items: center;                           /* Centra horizontalmente los hijos. */
+    justify-content: flex-start;                   /* Alinea los hijos al principio del eje vertical. */
+    min-height: 100vh;                             /* Asegura que el body tenga al menos el alto de la pantalla. */
+    margin: 0;                                     /* Elimina el margen predeterminado del navegador. */
+    padding-top: 20px;                             /* Agrega espacio arriba del contenido. */
+}
+
+h1 {
+    margin-top: 20px;                              /* Espacio encima del encabezado. */
+    color: #f0f0f0;                              /* Color del texto ligeramente gris claro. */
+}
+
+label {
+    margin-top: 15px;                              /* Espacio arriba de cada etiqueta. */
+    font-size: 1.1em;                              /* Tamaño de fuente un poco más grande que el normal. */
+    color: #ccc;                                 /* Color gris claro. */
+}
+
+input[type="number"] {
+    margin: 10px;                                  /* Espaciado exterior. */
+    padding: 10px;                                 /* Espaciado interior. */
+    font-size: 16px;                               /* Tamaño del texto. */
+    border: 1px solid #555;                      /* Borde gris oscuro. */
+    border-radius: 5px;                            /* Bordes redondeados. */
+    background-color: #333;                      /* Fondo gris muy oscuro. */
+    color: #fff;                                 /* Texto blanco. */
+    width: 100px;                                  /* Ancho fijo para los inputs. */
+}
+
+button {
+    margin: 10px;                                 /* Margen alrededor del botón. */
+    padding: 10px 20px;                           /* Espaciado vertical y horizontal. */
+    font-size: 16px;                              /* Tamaño de fuente. */
+    border: none;                                 /* Sin borde visible. */
+    border-radius: 5px;                           /* Esquinas redondeadas. */
+    background-color: #5cb85c;                  /* Fondo verde. */
+    color: #fff;                                /* Texto blanco. */
+    cursor: pointer;                              /* Cursor cambia a "mano" al pasar por encima. */
+    transition: background-color 0.3s ease;       /* Transición suave del color de fondo al hacer hover. */
+
+}
+
+button:hover {
+    background-color: #4cae4c;                  /* Fondo más oscuro al pasar el cursor. */
+}
+
+#estado { 
+    margin-top: 15px;                             /* Espacio superior. */
+    font-size: 1.1em;                             /* Fuente un poco más grande. */
+    color: #ddd;                                /* Color gris claro. */
+}
+
+#arreglo {
+    margin-top: 15px;                             /* Espacio superior. */
+    font-size: 1em;                               /* Tamaño de fuente normal. */
+    color: #ccc;                                /* Texto gris claro. */
+    white-space: pre-wrap;                        /* Respeta los saltos de línea y espacios. */
+}
+
+/********************************  Tablero Principal  ********************************/
+
+.tablero {
+    display: grid;                                /* Muestra las casillas como una cuadrícula. */
+    margin: 20px auto;                            /* Espacio alrededor y centrado horizontal. */
+    border: 2px solid #888;                     /* Borde gris. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);   /* Sombra que da efecto de profundidad. */
+}
+
+.casilla {
+    width: 50px;                                  /* Ancho de cada celda. */
+    height: 50px;                                 /* Alto igual para que sea cuadrada. */
+    display: flex;                                /* Contenedor flex para centrar contenido. */
+    align-items: center;                          /* Centrado vertical. */
+    justify-content: center;                      /* Centrado horizontal. */
+    font-size: 28px;                              /* Tamaño del texto. */
+    transition: background-color 0.3s ease;       /* Transición suave del fondo al hacer hover. */
+}
+
+.blanco {
+    background-color: #f0d9b5;                  /* Color de casilla clara (estilo ajedrez). */
+    color: black;                               /* Texto negro. */
+}
+
+.negro {
+    background-color: #b58863;                  /* Color de casilla oscura (estilo ajedrez). */
+}
+
+.tablero .casilla:hover {
+    background-color: rgba(255, 255, 0, 0.2);   /* Color amarillo translúcido al hacer hover. */
+}
+
+
+#todasLasSoluciones {
+    margin-top: 20px;                             /* Agrega espacio arriba del contenedor de soluciones. */
+    display: flex;                                /* Usa Flexbox para organizar el contenido internamente. */
+    flex-direction: column;                       /* Apila los elementos hijos verticalmente. */
+    align-items: center;                          /* Centra horizontalmente los hijos. */
+    text-align: center;   
+    }                        /* Centra el texto dentro de este contenedor. */
+
+.solucion {
+    margin: 20px auto;                            /* Espacio exterior y centrado horizontal. */
+    margin-bottom: 20px;                          /* Repetido pero reafirma espacio debajo. */
+    border: 1px solid #ccc;                     /* Borde gris oscuro. */
+    padding: 10px;                                /* Espacio interno. */
+    border-radius: 8px;                           /* Bordes redondeados. */
+    background-color: #2a2a2a;                  /* Fondo gris oscuro. */
+    width: fit-content;                           /* Ancho ajustado al contenido. */
+    text-align: center;                           /* Centrado del texto. */
+}
+
+.solucion h3 {
+    color: #eee;                                /* Texto casi blanco. */
+    margin-top: 0;                                /* Sin margen superior. */
+}
+
+.solucion p {
+    color: #ccc;                                /* Texto en gris claro. */
+    margin-top: 10px;                             /* Espacio entre el párrafo y lo que esté encima. */
+}
+
+.solucion-tablero {
+    display: grid;                                /* Presenta el tablero como una grilla. */
+    margin: 10px auto;                            /* Margen con centrado horizontal. */
+    border: 1px solid #eee;                     /* Borde claro para enmarcar el tablero. */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);   /* Sombra sutil. */
+    justify-content: center;                      /* Centra las columnas dentro de la grilla. */
+}
+
+.solucion-tablero .casilla {
+    width: 30px;                                  /* Ancho de celda más pequeño que el principal. */
+    height: 30px;                                 /* Altura igual al ancho. */
+    font-size: 18px;                              /* Texto más pequeño. */
+    display: flex;                                /* Flex para centrar el contenido. */
+    align-items: center;                          /* Centrado vertical. */
+    justify-content: center;                      /* Centrado horizontal. */
+}
