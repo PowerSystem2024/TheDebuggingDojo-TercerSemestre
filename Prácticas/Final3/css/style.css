@@ -73,11 +73,39 @@ section .color:nth-child(3){
   }
 }
 
-.box .square:nth-child(1){
+.box .square:nth-of-type(1) {
   top: -50px;
   right: -60px;
   width: 100px;
   height: 100px;
+}
+
+.box .square:nth-of-type(2) {
+  bottom: 50px;
+  left: -60px;
+  width: 80px;
+  height: 80px;
+}
+
+.box .square:nth-of-type(3) {
+  top: 200px;
+  left: 376px;    
+  width: 60px;
+  height: 60px;
+}
+
+.box .square:nth-of-type(4) {
+  bottom: 100px;
+  right: 140px;
+  width: 70px;
+  height: 70px;
+}
+
+.box .square:nth-of-type(5) {
+  top: -30px;
+  left: 100px;
+  width: 90px;
+  height: 90px;
 }
 
 .container{
