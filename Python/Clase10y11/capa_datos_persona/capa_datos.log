@@ -1,0 +1,35 @@
+08:37:10 PM: DEBUG [logger_base.py: 15] Mensaje a nivel debug
+08:37:10 PM: INFO [logger_base.py: 16] Mensaje a nivel info
+08:37:10 PM: WARNING [logger_base.py: 17] Mensaje a nivel warning
+08:37:10 PM: ERROR [logger_base.py: 18] Mensaje a nivel error
+08:37:10 PM: CRITICAL [logger_base.py: 19] Mensaje a nivel critical
+09:04:58 PM: DEBUG [Persona.py: 49] 
+            Id Persona: 1, 
+            Nombre y Apellido: Gonzalo Juarez, 
+            Email: gjuarez@gmail.com
+        
+09:06:19 PM: DEBUG [Persona.py: 49] 
+            Id Persona: 1, 
+            Nombre y Apellido: Gonzalo Juarez, 
+            Email: gjuarez@gmail.com
+        
+09:06:19 PM: DEBUG [Persona.py: 51] 
+            Id Persona: None, 
+            Nombre y Apellido: Juan Perez, 
+            Email: jperez@gmail.com
+        
+09:47:52 PM: ERROR [conexion.py: 27] Ocurrió un error: connection to server at "127.0.0.1", port 5432 failed: FATAL:  database "test_db" does not exist
+
+09:48:26 PM: DEBUG [conexion.py: 24] Conexión Exitosa: <connection object at 0x000001F3338E0AE0; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+09:49:34 PM: ERROR [conexion.py: 27] Ocurrió un error: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgre"
+
+09:49:41 PM: DEBUG [conexion.py: 24] Conexión Exitosa: <connection object at 0x000001BF519A0AE0; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+09:50:39 PM: DEBUG [conexion.py: 24] Conexión Exitosa: <connection object at 0x00000189B52C0AE0; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+09:50:39 PM: DEBUG [conexion.py: 37] Se abrió correctamente el cursor: <cursor object at 0x00000189B52EF5A0; closed: 0>
+08:27:44 PM: DEBUG [conexion.py: 24] Conexión Exitosa: <connection object at 0x0000015486AA0AE0; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5432', closed: 0>
+08:27:44 PM: DEBUG [conexion.py: 37] Se abrió correctamente el cursor: <cursor object at 0x0000015486ACB840; closed: 0>
+08:27:44 PM: DEBUG [persona_dao.py: 35] 
+            Id Persona: 1, 
+            Nombre y Apellido: Gonzalo Juarez, 
+            Email: gonzaloarieljuarez11@gmail.com
+        
